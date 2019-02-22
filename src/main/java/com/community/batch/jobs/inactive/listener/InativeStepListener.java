@@ -12,6 +12,8 @@ package com.community.batch.jobs.inactive.listener;/* Copyright (c) 2018 ZUM Int
  *   KimYJ                    2018-04-26
  */
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.core.annotation.AfterStep;
 import org.springframework.batch.core.annotation.BeforeStep;
@@ -22,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Component
 public class InativeStepListener {
-
+	private final Logger log=LoggerFactory.getLogger(this.getClass());
     @BeforeStep
     public void beforeStep(StepExecution stepExecution) {
         log.info("Before Step");

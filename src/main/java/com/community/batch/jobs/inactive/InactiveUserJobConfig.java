@@ -37,7 +37,7 @@ import lombok.AllArgsConstructor;
 public class InactiveUserJobConfig {
     private final static int CHUNK_SIZE = 5;
 
-    private final EntityManagerFactory entityManagerFactory;
+    private  EntityManagerFactory entityManagerFactory;
 
     @Bean
     public Job inactiveUserJob(JobBuilderFactory jobBuilderFactory, InactiveIJobListener inactiveIJobListener, Step inactiveJobStep) {
